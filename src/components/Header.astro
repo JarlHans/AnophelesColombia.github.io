@@ -1,0 +1,95 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<header>
+	<nav>
+		<h2><a href="/">{SITE_TITLE} <br><span class="subtitle">BÍOLOGO, PhD</span></a></h2>
+		<div class="internal-links">
+			<HeaderLink href="/">Inicio</HeaderLink>
+			<HeaderLink href="/blog">Blog</HeaderLink>
+		<!--<HeaderLink href="/about">About</HeaderLink> -->
+			
+		</div>
+
+	</nav>
+</header>
+<style>
+	header {
+		margin: 0;
+		padding: 0 1em;
+		background: white;
+		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+	}
+	h2 {
+		margin: 0;
+		font-size: 1em;
+	}
+
+	h2 a,
+	h2 a.active {
+		text-decoration: none;
+	}
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 4.5rem;
+	}
+
+	nav h2{padding-top: 1rem;
+		font-size: 1.8rem;
+		color: #323341;
+	}
+
+	.subtitle{
+		position: absolute;
+		font-size: 0.8rem;
+		padding-left: 4.3rem;
+		background-color: #323341;
+		color: #ffffff;
+		margin-left: 1rem;
+	}
+
+	nav a {
+		padding: 1em 0.5em;
+		color: var(--black);
+		border-bottom: 4px solid transparent;
+		text-decoration: none;
+	}
+	nav a.active {
+		text-decoration: none;
+		border-bottom-color: #323341;
+	}
+
+	nav img{
+		margin-top: 12px;
+
+	}
+
+	.social-links,
+	.social-links a {
+		display: flex;
+		width: 2rem;
+	}
+	@media (max-width: 720px) {
+		.social-links {
+			display: none;
+		}
+	}
+
+	@media (max-width: 800px) {
+		nav h2{
+			font-size: 1rem;
+		}
+
+		.subtitle{
+		font-size: 0.6rem;
+		padding-left: 1rem;
+		background-color: #323341;
+		color: #ffffff;
+		margin-left: 0.52rem;
+	}
+	}
+</style>

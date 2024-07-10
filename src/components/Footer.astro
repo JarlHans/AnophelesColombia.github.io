@@ -1,0 +1,25 @@
+---
+const today = new Date();
+---
+
+<footer>
+	&copy; {today.getFullYear()} Anopheles de Colombia. All rights reserved.
+
+	<a href="https://www.linkedin.com/in/john-freddy-ruiz-lopez-phd-096a1716a/" target="_blank">
+		<img src="linkedin-svg.svg" alt="">
+	</a>
+</footer>
+<style>
+	footer {
+		display: flex;
+		justify-content: space-between;
+		padding: 2em 1em 1em 1em;
+		background: linear-gradient(var(--gray-gradient)) no-repeat;
+		color: rgb(var(--gray));
+		text-align: center;
+	}
+
+	footer img{
+		width: 40px;
+	}
+</style>
